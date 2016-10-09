@@ -1,6 +1,6 @@
 {
   "name": "mpg123-static",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mpg123 static binaries for Mac OSX and Linux and Windows,use it to play mp3",
   "main": "index.js",
   "scripts": {
