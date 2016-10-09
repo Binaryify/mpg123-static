@@ -22,19 +22,20 @@ $ npm install mpg123-static
 Returns the path of a statically linked mpg123 binary on the local filesystem.
 
 ``` js
-cosnt mpg123 = require('mpg123-static')
-cosnt mpg123path=mpg123.path
+const mpg123 = require('mpg123-static')
+const mpg123path=mpg123.path
 console.log(mpg123path)
-// /Users/eugeneware/Dropbox/work/mpg123-static/bin/darwin/x64/mpg123
+// // /Users/eugeneware/Dropbox/work/mpg123-static/bin/darwin/x64/mpg123
 const exec = require('child_process').exec
 const filename="1.mp3"
-const cmdStr = `${mpg123path} ${filename}.mp3`
+const cmdStr = `${mpg123path}  ${filename}.mp3`
 exec(cmdStr, (err, stdout, stderr) => {
     if (err) {
       console.log('error:' + stderr)
     } else {
       console.log("now playing the mp3...")
     }
+})
 
 ```
 
