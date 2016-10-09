@@ -41,8 +41,6 @@ exec(cmdStr, (err, stdout, stderr) => {
 Currently supports Mac OS X (64-bit), Linux (64-bit) and Windows
 (32 and 64-bit).
 
-
-
 * 64 bit Mac OSX
 * 64 bit Linux
 * 64 bit Windows
