@@ -46,3 +46,42 @@ Currently supports Mac OS X (64-bit), Linux (64-bit) and Windows
 * 64 bit Linux
 * 64 bit Windows
 * 32 bit Windows
+
+## Notice
+if you use OSX/Linux,you should use this command before you use this package
+```
+$ sudo chmod 775 ./node_modules/mpg123-static/bin/{your platfrom}/x64/mpg123
+```
+OSX's platfrom is 'darwin'.
+linux's  platfrom is 'linux'
+for example,
+```
+$ sudo chmod 775 ./node_modules/mpg123-static/bin/darwin/x64/mpg123
+```
+
+if you use windows,you should install git-bash or cmder,then add run.sh to your project path,and use my package like my example in you js file
+```js
+const mpg123 = require('mpg123-static')
+const fs=require('fs')
+const os = require('os')
+const path = require('path')
+const mpg123path=mpg123.path
+const exec = require('child_process').exec
+const platform = os.platform()
+const arch = os.arch()
+
+const filename="1.mp3"
+const content=`#!/usr/bin/env bash
+cd node_modules/mpg123-static/bin/win32/${arch}
+./mpg123.exe ${filename}
+`
+const cmdStr="bash run.sh"
+fs.writeFile('./run.sh',content)
+exec(cmdStr, (err, stdout, stderr) => {
+    if (err) {
+      console.log('error:' + stderr)
+    } else {
+      console.log("now playing the mp3...")
+    }
+})
+```
