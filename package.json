@@ -1,6 +1,6 @@
 {
   "name": "mpg123-static",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "mpg123 static binaries for Mac OSX and Linux and Windows,use it to play mp3",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "keywords": ["mpg123","mpg123-static","mpg123 binary","mpg123 static","mp3 player","node mp3 player"],
   "author": "traveller",
-  "license": "MIC",
+  "license": "MIT",
   "devDependencies": {
     "tape": "^4.6.2"
   }
